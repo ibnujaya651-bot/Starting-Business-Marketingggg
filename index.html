@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Starting Business Digital Marketing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Starting Business Digital Marketing</h1>
+  <p>Platform Produk Digital & Marketing Berbasis Teknologi</p>
+</header>
+
+<!-- LOGIN -->
+<div id="loginBox" class="login-box">
+  <h2>Login</h2>
+  <input type="text" id="username" placeholder="Username">
+  <input type="password" id="password" placeholder="Password">
+  <button onclick="login()">Login</button>
+  <p id="error"></p>
+</div>
+
+<!-- DASHBOARD -->
+<div id="dashboard" class="container hidden">
+
+  <!-- SEARCH -->
+  <input type="text" id="searchInput" placeholder="Cari produk digital..." onkeyup="searchProduct()">
+
+  <!-- PRODUK DIGITAL -->
+  <h2>Produk Digital</h2>
+  <div class="cards" id="productList">
+
+    <div class="card" onclick="showDetail('ebook')">
+      <h3>E-Book Digital Marketing</h3>
+      <p>Panduan bisnis online</p>
+    </div>
+
+    <div class="card" onclick="showDetail('template')">
+      <h3>Template Konten Instagram</h3>
+      <p>Desain promosi siap pakai</p>
+    </div>
+
+    <div class="card" onclick="showDetail('kelas')">
+      <h3>Kelas Online Marketing</h3>
+      <p>Belajar digital marketing</p>
+    </div>
+
+  </div>
+
+  <!-- DETAIL PRODUK -->
+  <div id="detailBox" class="detail hidden">
+    <h2 id="detailTitle"></h2>
+    <p id="detailDesc"></p>
+    <p id="detailPrice"></p>
+    <button onclick="closeDetail()">Tutup</button>
+  </div>
+
+  <button class="logout" onclick="logout()">Logout</button>
+</div>
+
+<footer>
+  <p>© 2025 Starting Business Digital Marketing</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
